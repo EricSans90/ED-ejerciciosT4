@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+// Comentario para probar la ramificación
 public class Criba
 {
     // Generar números primos de 1 a max
