@@ -60,6 +60,12 @@ public class CribarPrimos
             esPrimo[j] = false;
     }
 
+    /**
+     * Cuenta la cantidad de números primos en un vector booleano.
+     *
+     * @param esPrimo un vector booleano que indica si un número es primo o no
+     * @return la cantidad de números primos en el vector booleano
+     */
     private static int contarPrimos(boolean[] esPrimo) {
         int cantidadTotalPrimos = 0;
 
@@ -70,6 +76,13 @@ public class CribarPrimos
         return cantidadTotalPrimos;
     }
 
+    /**
+     * Crea un vector de números primos a partir de un vector booleano que indica si un número es primo o no.
+     *
+     * @param esPrimo un vector booleano que indica si un número es primo o no
+     * @param cantidadPrimos la cantidad de números primos en el vector booleano
+     * @return un vector de números primos
+     */
     private static int[] crearVectorPrimos(boolean[] esPrimo, int cantidadPrimos) {
         int[] primos = new int[cantidadPrimos];
         for (int i=0, j=0; i< esPrimo.length; i++) {
@@ -79,8 +92,11 @@ public class CribarPrimos
         return primos;
     }
 
-
-
+    /**
+     * Método principal que lee un número del usuario y genera un vector de números primos hasta ese número.
+     *
+     * @param args los argumentos de la línea de comandos (no se utilizan)
+     */
     public static void main(String[] args) {
         int numeroMaximo = obtenerEntradaUsuario();
         int vectorNumerosPrimos[]=new int[numeroMaximo];
@@ -91,6 +107,11 @@ public class CribarPrimos
         imprimirVectorPrimos(numeroMaximo, vectorNumerosPrimos);
     }
 
+    /**
+     * Obtiene un número del usuario utilizando la entrada estándar.
+     *
+     * @return el número introducido por el usuario
+     */
     private static int obtenerEntradaUsuario() {
         Scanner teclado=new Scanner(System.in);
         String preguntaInicial = "Introduce el número para la criba de Erastótenes:";
@@ -99,6 +120,12 @@ public class CribarPrimos
         return numeroMaximo;
     }
 
+    /**
+     * Imprime por consola el vector inicial de números hasta el número máximo dado.
+     *
+     * @param numeroMaximo El número máximo hasta el que imprimir el vector.
+     * @param vectorTodosNumeros El vector de todos los números.
+     */
     private static void imprimirVectorInicial(int numeroMaximo, int[] vectorTodosNumeros) {
         System.out.println("\nVector inicial hasta :"+ numeroMaximo);
         for (int i = 0; i < vectorTodosNumeros.length; i++) {
@@ -107,6 +134,12 @@ public class CribarPrimos
         }
     }
 
+    /**
+     * Imprime por consola el vector de números primos hasta el número máximo dado.
+     *
+     * @param numeroMaximo El número máximo hasta el que imprimir el vector de primos.
+     * @param vectorNumeros El vector de números primos.
+     */
     private static void imprimirVectorPrimos(int numeroMaximo, int[] vectorNumeros) {
         System.out.println("\nVector de primos hasta:"+ numeroMaximo);
         for (int i = 0; i < vectorNumeros.length; i++) {
