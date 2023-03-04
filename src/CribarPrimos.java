@@ -1,7 +1,10 @@
 import java.util.Scanner;
 /**
- * Esta clase contiene métodos para generar un vector de números primos utilizando
- * el algoritmo de la criba de Eratóstenes.
+ * Clase CribarPrimos:
+ * Generar un vector de números primos utilizando el algoritmo de la criba de Eratóstenes hasta un número
+ * introducido por el usuario.
+ * @author Eric Sans
+ * @version 1.0
  */
 public class CribarPrimos
 {
@@ -31,7 +34,7 @@ public class CribarPrimos
      *
      * @param esPrimo un vector booleano para indicar si un número es primo o no
      */
-    private static void inicializarVectorPrimos(boolean[] esPrimo) {
+    public static void inicializarVectorPrimos(boolean[] esPrimo) {
         for (int i=2; i< esPrimo.length; i++)
             esPrimo[i] = true;
     }
@@ -41,7 +44,7 @@ public class CribarPrimos
      *
      * @param esPrimo un vector booleano que indica si un número es primo o no
      */
-    private static void buscarPrimos(boolean[] esPrimo) {
+    public static void buscarPrimos(boolean[] esPrimo) {
         for (int i=2; i<Math.sqrt(esPrimo.length)+1; i++) {
             if (esPrimo[i]) {
                 eliminarMultiplosDelIesimo(esPrimo, i);
@@ -55,7 +58,7 @@ public class CribarPrimos
      * @param esPrimo un vector booleano que indica si un número es primo o no
      * @param i el número del cual se eliminarán los múltiplos
      */
-    private static void eliminarMultiplosDelIesimo(boolean[] esPrimo, int i) {
+    public static void eliminarMultiplosDelIesimo(boolean[] esPrimo, int i) {
         for (int j=2*i; j<esPrimo.length; j+=i)
             esPrimo[j] = false;
     }
@@ -66,7 +69,7 @@ public class CribarPrimos
      * @param esPrimo un vector booleano que indica si un número es primo o no
      * @return la cantidad de números primos en el vector booleano
      */
-    private static int contarPrimos(boolean[] esPrimo) {
+    public static int contarPrimos(boolean[] esPrimo) {
         int cantidadTotalPrimos = 0;
 
         for (int i=0; i< esPrimo.length; i++) {
@@ -83,7 +86,7 @@ public class CribarPrimos
      * @param cantidadPrimos la cantidad de números primos en el vector booleano
      * @return un vector de números primos
      */
-    private static int[] crearVectorPrimos(boolean[] esPrimo, int cantidadPrimos) {
+    public static int[] crearVectorPrimos(boolean[] esPrimo, int cantidadPrimos) {
         int[] primos = new int[cantidadPrimos];
         for (int i=0, j=0; i< esPrimo.length; i++) {
             if (esPrimo[i])
@@ -112,7 +115,7 @@ public class CribarPrimos
      *
      * @return el número introducido por el usuario
      */
-    private static int obtenerEntradaUsuario() {
+    public static int obtenerEntradaUsuario() {
         Scanner teclado=new Scanner(System.in);
         String preguntaInicial = "Introduce el número para la criba de Erastótenes:";
         System.out.println(preguntaInicial);
@@ -126,7 +129,7 @@ public class CribarPrimos
      * @param numeroMaximo El número máximo hasta el que imprimir el vector.
      * @param vectorTodosNumeros El vector de todos los números.
      */
-    private static void imprimirVectorInicial(int numeroMaximo, int[] vectorTodosNumeros) {
+    public static void imprimirVectorInicial(int numeroMaximo, int[] vectorTodosNumeros) {
         System.out.println("\nVector inicial hasta :"+ numeroMaximo);
         for (int i = 0; i < vectorTodosNumeros.length; i++) {
             if (i%10==0) System.out.println();
@@ -140,7 +143,7 @@ public class CribarPrimos
      * @param numeroMaximo El número máximo hasta el que imprimir el vector de primos.
      * @param vectorNumeros El vector de números primos.
      */
-    private static void imprimirVectorPrimos(int numeroMaximo, int[] vectorNumeros) {
+    public static void imprimirVectorPrimos(int numeroMaximo, int[] vectorNumeros) {
         System.out.println("\nVector de primos hasta:"+ numeroMaximo);
         for (int i = 0; i < vectorNumeros.length; i++) {
             if (i%10==0) System.out.println();

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4be35716-8a04-41ea-a9fa-d599ecd79c17" name="Changes" comment="Arreglo fallo en función eliminarMultiplosDelIesimo">
+    <list default="true" id="4be35716-8a04-41ea-a9fa-d599ecd79c17" name="Changes" comment="Final (?) documentar JavaDoc">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CribarPrimos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CribarPrimos.java" afterDir="false" />
     </list>
@@ -110,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677891490035</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Final (?) documentar JavaDoc">
+      <created>1677894991755</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1677894991755</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -144,6 +151,7 @@
     <MESSAGE value="Mitad de la refactorización" />
     <MESSAGE value="Casi final o final de la refactorización" />
     <MESSAGE value="Final de la refactorización" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final de la refactorización" />
+    <MESSAGE value="Final (?) documentar JavaDoc" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final (?) documentar JavaDoc" />
   </component>
 </project>
