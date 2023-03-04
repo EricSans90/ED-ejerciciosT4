@@ -31,12 +31,12 @@ public class Criba
 
     private static int contarPrimos(int TamañoArray, boolean[] esPrimo) {
         int i;
-        int cuenta = 0;
+        int cantidadTotalPrimos = 0;
         for (i=0; i< TamañoArray; i++) {
             if (esPrimo[i])
-                cuenta++;
+                cantidadTotalPrimos++;
         }
-        return cuenta;
+        return cantidadTotalPrimos;
     }
 
     private static void inicializarVectorPrimos(int TamañoArray, boolean[] esPrimo) {
@@ -52,28 +52,37 @@ public class Criba
         int j;
         for (i=2; i<Math.sqrt(TamañoArray)+1; i++) {
             if (esPrimo[i]) {
-                // Eliminar los múltiplos de i
-                for (j=2*i; j< TamañoArray; j+=i)
-                    esPrimo[j] = false;
+                eliminarMultiplosI(TamañoArray, esPrimo, i);
             }
         }
     }
 
+    private static void eliminarMultiplosI(int TamañoArray, boolean[] esPrimo, int i) {
+        int j;
+        for (j=2* i; j< TamañoArray; j+= i)
+            esPrimo[j] = false;
+    }
+
     public static void main(String[] args) {
         Scanner teclado=new Scanner(System.in);
-        System.out.println("Introduce el número para la criba de Erastótenes:");
-        int dato=teclado.nextInt();
-        int vector[]=new int[dato];
-        System.out.println("\nVector inicial hasta :"+dato);
-        for (int i = 0; i < vector.length; i++) {
+        String preguntaInicial = "Introduce el número para la criba de Erastótenes:";
+        System.out.println(preguntaInicial);
+        int numeroMaximo=teclado.nextInt();
+        int vectorTodosNumeros[]=new int[numeroMaximo];
+        imprimirVector10en10(numeroMaximo, vectorTodosNumeros);
+        vectorTodosNumeros= generarPrimosHastaMax(numeroMaximo);
+        System.out.println("\nVector de primos hasta:"+numeroMaximo);
+        for (int i = 0; i < vectorTodosNumeros.length; i++) {
+            if (i%10==0) System.out.println();
+            System.out.print(vectorTodosNumeros[i]+"\t");
+        }
+    }
+
+    private static void imprimirVector10en10(int numeroMaximo, int[] vectorTodosNumeros) {
+        System.out.println("\nVector inicial hasta :"+ numeroMaximo);
+        for (int i = 0; i < vectorTodosNumeros.length; i++) {
             if (i%10==0) System.out.println();
             System.out.print(i+1+"\t");
-        }
-        vector= generarPrimosHastaMax(dato);
-        System.out.println("\nVector de primos hasta:"+dato);
-        for (int i = 0; i < vector.length; i++) {
-            if (i%10==0) System.out.println();
-            System.out.print(vector[i]+"\t");
         }
     }
 }
