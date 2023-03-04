@@ -1,7 +1,17 @@
 import java.util.Scanner;
-
+/**
+ * Esta clase contiene métodos para generar un vector de números primos utilizando
+ * el algoritmo de la criba de Eratóstenes.
+ */
 public class CribarPrimos
 {
+
+    /**
+     * Genera un vector de números primos hasta el número máximo dado.
+     *
+     * @param numeroMaximo el número máximo hasta el cual se generarán los números primos
+     * @return un vector de números primos hasta el número máximo
+     */
     public static int[] generarPrimosHastaMax(int numeroMaximo)
     {
         if (numeroMaximo >= 2) {
@@ -16,21 +26,37 @@ public class CribarPrimos
         }
     }
 
+    /**
+     * Inicializa un vector booleano para indicar si un número es primo o no.
+     *
+     * @param esPrimo un vector booleano para indicar si un número es primo o no
+     */
     private static void inicializarVectorPrimos(boolean[] esPrimo) {
         for (int i=2; i< esPrimo.length; i++)
             esPrimo[i] = true;
     }
 
+    /**
+     * Busca números primos utilizando el algoritmo de la criba de Eratóstenes.
+     *
+     * @param esPrimo un vector booleano que indica si un número es primo o no
+     */
     private static void buscarPrimos(boolean[] esPrimo) {
         for (int i=2; i<Math.sqrt(esPrimo.length)+1; i++) {
             if (esPrimo[i]) {
-                eliminarMultiplosDelIesimo(esPrimo.length, esPrimo, i);
+                eliminarMultiplosDelIesimo(esPrimo, i);
             }
         }
     }
 
-    private static void eliminarMultiplosDelIesimo(int TamañoArray, boolean[] esPrimo, int i) {
-        for (int j=2*i; j<TamañoArray; j+=i)
+    /**
+     * Elimina los múltiplos de un número en un vector booleano.
+     *
+     * @param esPrimo un vector booleano que indica si un número es primo o no
+     * @param i el número del cual se eliminarán los múltiplos
+     */
+    private static void eliminarMultiplosDelIesimo(boolean[] esPrimo, int i) {
+        for (int j=2*i; j<esPrimo.length; j+=i)
             esPrimo[j] = false;
     }
 
