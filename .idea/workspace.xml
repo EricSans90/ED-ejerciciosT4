@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4be35716-8a04-41ea-a9fa-d599ecd79c17" name="Changes" comment="Principio de la refactorización">
+    <list default="true" id="4be35716-8a04-41ea-a9fa-d599ecd79c17" name="Changes" comment="Mitad de la refactorización">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Criba.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Criba.java" afterDir="false" />
     </list>
@@ -81,7 +81,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677888513369</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Mitad de la refactorización">
+      <created>1677889048642</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1677889048642</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -112,6 +119,7 @@
     <MESSAGE value="Arreglar espacios" />
     <MESSAGE value="Comentario para probar la ramificación" />
     <MESSAGE value="Principio de la refactorización" />
-    <option name="LAST_COMMIT_MESSAGE" value="Principio de la refactorización" />
+    <MESSAGE value="Mitad de la refactorización" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mitad de la refactorización" />
   </component>
 </project>
