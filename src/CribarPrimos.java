@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Criba
+public class CribarPrimos
 {
     public static int[] generarPrimosHastaMax(int numeroMaximo)
     {
@@ -24,12 +24,12 @@ public class Criba
     private static void buscarPrimos(boolean[] esPrimo) {
         for (int i=2; i<Math.sqrt(esPrimo.length)+1; i++) {
             if (esPrimo[i]) {
-                eliminarMultiplosDeI(esPrimo.length, esPrimo, i);
+                eliminarMultiplosDelIesimo(esPrimo.length, esPrimo, i);
             }
         }
     }
 
-    private static void eliminarMultiplosDeI(int TamañoArray, boolean[] esPrimo, int i) {
+    private static void eliminarMultiplosDelIesimo(int TamañoArray, boolean[] esPrimo, int i) {
         for (int j=2*i; j<TamañoArray; j+=i)
             esPrimo[j] = false;
     }
