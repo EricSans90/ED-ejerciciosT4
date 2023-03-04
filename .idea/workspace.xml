@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4be35716-8a04-41ea-a9fa-d599ecd79c17" name="Changes" comment="Mitad de la refactorización">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Criba.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Criba.java" afterDir="false" />
-    </list>
+    <list default="true" id="4be35716-8a04-41ea-a9fa-d599ecd79c17" name="Changes" comment="Final de la refactorización" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,6 +35,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "last_opened_file_path": "C:/Users/User/IdeaProjects/ED-EjerciciosT4",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
@@ -88,7 +86,21 @@
       <option name="project" value="LOCAL" />
       <updated>1677889048642</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Casi final o final de la refactorización">
+      <created>1677891108045</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1677891108045</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Final de la refactorización">
+      <created>1677891349986</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1677891349986</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -120,6 +132,8 @@
     <MESSAGE value="Comentario para probar la ramificación" />
     <MESSAGE value="Principio de la refactorización" />
     <MESSAGE value="Mitad de la refactorización" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mitad de la refactorización" />
+    <MESSAGE value="Casi final o final de la refactorización" />
+    <MESSAGE value="Final de la refactorización" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final de la refactorización" />
   </component>
 </project>
